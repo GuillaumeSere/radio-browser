@@ -62,6 +62,7 @@
 }
 
 .App {
+    background: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +80,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #201a27;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -216,7 +217,7 @@ body {
 .banner{
     width: 100%;
     margin: 0;
-    background: #1e352d;
+    background: black;
     border-bottom: 2px solid white;
 }
 
@@ -235,6 +236,7 @@ h2 {
 
 .radio {
   max-width: 1600px;
+  background: black;
 }
 
 .filters {
