@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 .App {
   text-align: center;
 }
@@ -9,17 +10,27 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,11 +39,338 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@-webkit-keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #201a27;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #28342a;
+    border: 1px solid #6be3bd;
+    border-radius: 25px;
+}
+
+body {
+  background: #18141e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#150e1e), to(#201a27));
+  background: linear-gradient(to bottom, #150e1e, #201a27);
+  color: #e40017;
+  color: #e36bae;
+  color: #fb743e;
+  color: #ebebeb;
+  font-family: "Architects Daughter", cursive;
+}
+
+.guirlande{
+   position: absolute;
+    left: 0;
+    margin-top: 2rem;
+    height: 150px;
+}
+
+.guirlande1{
+    position: absolute;
+     left: 0;
+     margin-left: 11rem;
+     margin-top: -3rem;
+     height: 150px;
+ }
+
+ .guirlande2{
+    position: absolute;
+     left: 0;
+     margin-left: 25rem;
+     margin-top: 4rem;
+     height: 150px;
+ }
+
+ .guirlande3{
+    position: absolute;
+     left: 0;
+     margin-left: 14rem;
+     margin-top: 4rem;
+     height: 150px;
+ }
+
+ .guirlande4{
+    position: absolute;
+     left: 0;
+     margin-left: 30rem;
+     margin-top: -2rem;
+     height: 150px;
+ }
+
+ .guirlande5{
+    position: absolute;
+     left: 0;
+     margin-top: 3rem;
+     height: 150px;
+ }
+
+ .guirlande6{
+    position: absolute;
+     right: 0;
+     margin-left: 10rem;
+     margin-top: -11rem;
+     height: 150px;
+ }
+ 
+ .guirlande7{
+     position: absolute;
+      right: 0;
+      margin-left: 10rem;
+      height: 150px;
+      margin-top: -10rem;
+  }
+ 
+  .guirlande8{
+     position: absolute;
+      right: 0;
+      margin-right: 14rem;
+      margin-top: -9rem;
+      height: 150px;
+  }
+ 
+  .guirlande9{
+     position: absolute;
+      right: 0;
+      margin-right: 30rem;
+      margin-top: -15rem;
+      height: 150px;
+  }
+ 
+  .guirlande10{
+     position: absolute;
+      right: 0;
+      margin-right: 25rem;
+      margin-top: -9rem;
+      height: 150px;
+  }
+ 
+  .guirlande11{
+     position: absolute;
+      right: 0;
+      margin-right: 10rem;
+      margin-top: -16rem;
+      height: 150px;
+  }
+
+.banner{
+    width: 100%;
+    margin: 0;
+    background: #1e352d;
+    border-bottom: 2px solid white;
+}
+
+h1 {
+  margin: 1em 1rem 0;
+  font-size: 3rem;
+  color: rgb(0, 128, 255);
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+h2 {
+  margin-bottom: 2em;
+  color: rgb(0, 128, 255);
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+.radio {
+  max-width: 1600px;
+}
+
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.filters span {
+  margin: 1rem;
+  border: 1px solid #6be3bd;
+  border-radius: 10px;
+  padding: 0.25em 0.75em;
+  font-weight: 800;
+}
+
+.filters span:hover {
+  cursor: pointer;
+  background: #28342a;
+  color: white;
+}
+
+.filters .selected {
+    background: #28342a;
+    color: white;
+}
+
+.stations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.station {
+  width: 400px;
+  font-size: 1.4rem;
+  border: 1px solid #3e5f4a;
+  margin: 0.25em;
+  border-radius: 10px;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.station:hover {
+  border-color: #6be3bd;
+  background: #1e352d;
+}
+
+.stationName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1em;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+}
+
+.stationName img {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: 2px solid #3e5f4a;
+  margin: 0 0.25em;
+}
+
+audio {
+  width: 100%;
+}
+
+.rhap_container.player {
+  background-color: #3e5f4a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  padding: 0.25em 0.75em;
+  border-radius: 10px;
+}
+
+.rhap_stacked .rhap_controls-section {
+  margin-top: 0 !important;
+}
+
+.rhap_controls-section .rhap_volume-controls {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
+  fill: #ebebeb !important;
+}
+
+.rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
+  fill: #08f328 !important;
+}
+
+.footer {
+  font-size: 30px;
+}
+
+.footer p span {
+  color: #3e5f4a;
+}
+
+@media (max-width: 650px) {
+  .footer {
+    font-size: 18px;
+  }
+  .station {
+    width: 320px;
   }
 }
