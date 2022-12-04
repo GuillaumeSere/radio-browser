@@ -8,19 +8,19 @@ function App() {
     <div className="App">
     <div className="banner">
     <img className="guirlande" src={guirlande1} alt="" />
-    <img className="guirlande1" src={guirlande2} alt="" />
-    <img className="guirlande2" src={guirlande2} alt="" />
-    <img className="guirlande3" src={guirlande2} alt="" />
-    <img className="guirlande4" src={guirlande2} alt="" />
-    <img className="guirlande5" src={guirlande2} alt="" />
+    <img className="guirlande1 etoile" src={guirlande2} alt="" />
+    <img className="guirlande2 etoile" src={guirlande2} alt="" />
+    <img className="guirlande3 etoile" src={guirlande2} alt="" />
+    <img className="guirlande4 etoile" src={guirlande2} alt="" />
+    <img className="guirlande5 etoile" src={guirlande2} alt="" />
     <h1>Live Radio Player</h1>
     <h2>Choisissez votre station préférée</h2>
     <img className="guirlande6" src={guirlande1} alt="" />
-    <img className="guirlande7" src={guirlande2} alt="" />
-    <img className="guirlande8" src={guirlande2} alt="" />
-    <img className="guirlande9" src={guirlande2} alt="" />
-    <img className="guirlande10" src={guirlande2} alt="" />
-    <img className="guirlande11" src={guirlande2} alt="" />
+    <img className="guirlande7 etoile" src={guirlande2} alt="" />
+    <img className="guirlande8 etoile" src={guirlande2} alt="" />
+    <img className="guirlande9 etoile" src={guirlande2} alt="" />
+    <img className="guirlande10 etoile" src={guirlande2} alt="" />
+    <img className="guirlande11 etoile" src={guirlande2} alt="" />
     </div>
     <Radio />
 </div>

@@ -2,12 +2,14 @@
   "name": "radio-browser",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://guillaumesere.github.io/radio-browser",
   "dependencies": {
     "@iconify/icons-mdi": "^1.2.34",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "dns": "file:./src/mock/dns",
+    "gh-pages": "^4.0.0",
     "querystring": "^0.2.1",
     "radio-browser": "^2.2.2",
     "react": "^18.2.0",
@@ -19,6 +21,8 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
