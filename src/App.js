@@ -1,12 +1,14 @@
 import './App.css';
 import Radio from './components/Radio';
-import guirlande1 from "./light.png"
-import guirlande2 from "./light1.png"
+import guirlande1 from "./light.png";
+import guirlande2 from "./light1.png";
+import Snowfall from 'react-snowfall';
 
 function App() {
   return (
     <div className="App">
     <div className="banner">
+    <Snowfall />
     <img className="guirlande" src={guirlande1} alt="" />
     <img className="guirlande1 etoile" src={guirlande2} alt="" />
     <img className="guirlande2 etoile" src={guirlande2} alt="" />
