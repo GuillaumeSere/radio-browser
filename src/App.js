@@ -15,7 +15,7 @@ function App() {
         height: '100vh',
       }}
     />
-    <img className="guirlande" src={guirlande1} alt="" />
+    <img className="guirlande cercle" src={guirlande1} alt="" />
     <img className="guirlande1 etoile" src={guirlande2} alt="" />
     <img className="guirlande2 etoile" src={guirlande2} alt="" />
     <img className="guirlande3 etoile" src={guirlande2} alt="" />
@@ -23,7 +23,7 @@ function App() {
     <img className="guirlande5 etoile" src={guirlande2} alt="" />
     <h1>Live Radio Player</h1>
     <h2>Choisissez votre station préférée</h2>
-    <img className="guirlande6" src={guirlande1} alt="" />
+    <img className="guirlande6 cercle" src={guirlande1} alt="" />
     <img className="guirlande7 etoile" src={guirlande2} alt="" />
     <img className="guirlande8 etoile" src={guirlande2} alt="" />
     <img className="guirlande9 etoile" src={guirlande2} alt="" />
