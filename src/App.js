@@ -8,7 +8,13 @@ function App() {
   return (
     <div className="App">
     <div className="banner">
-    <Snowfall />
+    <Snowfall
+     style={{
+        position: 'fixed',
+        width: '100vw',
+        height: '100vh',
+      }}
+    />
     <img className="guirlande" src={guirlande1} alt="" />
     <img className="guirlande1 etoile" src={guirlande2} alt="" />
     <img className="guirlande2 etoile" src={guirlande2} alt="" />
