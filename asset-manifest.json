@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/radio-browser/static/css/main.fe4f2ddb.css",
+    "main.css": "/radio-browser/static/css/main.2cf16208.css",
     "main.js": "/radio-browser/static/js/main.b0fd3fe7.js",
     "static/media/light1.png": "/radio-browser/static/media/light1.536a028fa1d32c05274a.png",
     "static/media/light.png": "/radio-browser/static/media/light.672e2e24045337e84f36.png",
     "static/media/radio.jpg": "/radio-browser/static/media/radio.6085ad7266251f3d7e66.jpg",
     "index.html": "/radio-browser/index.html",
-    "main.fe4f2ddb.css.map": "/radio-browser/static/css/main.fe4f2ddb.css.map",
+    "main.2cf16208.css.map": "/radio-browser/static/css/main.2cf16208.css.map",
     "main.b0fd3fe7.js.map": "/radio-browser/static/js/main.b0fd3fe7.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe4f2ddb.css",
+    "static/css/main.2cf16208.css",
     "static/js/main.b0fd3fe7.js"
   ]
 }
