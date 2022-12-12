@@ -56,6 +56,7 @@ function App() {
     <DayNightToggle
       onChange={handleChangeTheme}
       checked={isDarkMode}
+      className="dark"
     />
     </div>
     <Radio />
