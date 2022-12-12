@@ -62,7 +62,6 @@
 }
 
 .App {
-    background: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,15 +88,28 @@
     border-radius: 25px;
 }
 
-body {
-  background: #18141e;
-  background: -webkit-gradient(linear, left top, left bottom, from(#150e1e), to(#201a27));
-  background: linear-gradient(to bottom, #150e1e, #201a27);
-  color: #e40017;
-  color: #e36bae;
-  color: #fb743e;
-  color: #ebebeb;
-  font-family: "Architects Daughter", cursive;
+
+body[data-theme=light] {
+    background-color: rgb(199, 199, 199);
+    color: black;
+    transition: background-color 1050ms ease-in-out;
+    font-family: "Architects Daughter", cursive;
+  }
+  
+  body[data-theme=dark] {
+    background-color: #000000;
+    color: white;
+    transition: background-color 1050ms ease-in-out;
+    font-family: "Architects Daughter", cursive;
+  }
+
+  .eJLJkT {
+    margin-right: 1rem !important;
+    right: 0 !important;
+    position: absolute !important;
+    height: 32px;
+    width: 80px;
+    top: 10rem !important;
 }
 
 .guirlande{
@@ -257,7 +269,6 @@ h2 {
 
 .radio {
   max-width: 1600px;
-  background: black;
 }
 
 .filters {
@@ -279,7 +290,7 @@ h2 {
 
 .filters span {
   margin: 1rem;
-  border: 1px solid #6be3bd;
+  border: 1px solid #28342a;
   border-radius: 10px;
   padding: 0.25em 0.75em;
   font-weight: 800;
@@ -287,12 +298,14 @@ h2 {
 
 .filters span:hover {
   cursor: pointer;
-  background: #28342a;
+  border-color: #6be3bd;
+  background: #1e352d;
   color: white;
 }
 
 .filters .selected {
-    background: #28342a;
+    border-color: #6be3bd;
+    background: #1e352d;
     color: white;
 }
 
@@ -335,6 +348,7 @@ h2 {
 .station:hover {
   border-color: #6be3bd;
   background: #1e352d;
+  color: white;
 }
 
 .stationName {
