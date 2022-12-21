@@ -1,77 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: calc(10px + 2vmin);
+.banner {
+  border-bottom: 1px solid white;
+  background: #000000;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-.App {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -83,193 +24,50 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #28342a;
-    border: 1px solid #6be3bd;
-    border-radius: 25px;
+  background: white;
+  border-radius: 25px;
 }
-
 
 body[data-theme=light] {
-    background-color: #b5c7bb;
-    color: black;
-    transition: background-color 1050ms ease-in-out;
-    font-family: "Architects Daughter", cursive;
-  }
-  
-  body[data-theme=dark] {
-    background-color: #000000;
-    color: white;
-    transition: background-color 1050ms ease-in-out;
-    font-family: "Architects Daughter", cursive;
-  }
-
-  .dark {
-    margin-right: 1rem !important;
-    right: 0 !important;
-    position: absolute !important;
-    height: 32px;
-    width: 80px;
-    top: 10rem !important;
+  background-color: #d7d7d7;
+  color: black;
+  -webkit-transition: background-color 1050ms ease-in-out;
+  transition: background-color 1050ms ease-in-out;
+  font-family: "Architects Daughter", cursive;
 }
 
-.guirlande{
-    position: absolute;
-    left: 0;
-    margin-left: 40rem;
-    margin-top: 2rem;
-    height: 150px;
-}
-
-.guirlande1{
-    position: absolute;
-     left: 0;
-     margin-left: 11rem;
-     margin-top: -3rem;
-     height: 150px;
- }
-
- .guirlande2{
-    position: absolute;
-     left: 0;
-     margin-left: 25rem;
-     margin-top: 4rem;
-     height: 150px;
- }
-
- .guirlande3{
-    position: absolute;
-     left: 0;
-     margin-left: 14rem;
-     margin-top: 4rem;
-     height: 150px;
- }
-
- .guirlande4{
-    position: absolute;
-     left: 0;
-     margin-left: 30rem;
-     margin-top: -2rem;
-     height: 150px;
- }
-
- .guirlande5{
-    position: absolute;
-     left: 0;
-     margin-top: 3rem;
-     height: 150px;
-     margin-left: 1rem;
- }
-
- .guirlande6{
-    position: absolute;
-     right: 0;
-     margin-right: 40rem;
-     margin-top: -11rem;
-     height: 150px;
- }
- 
- .guirlande7{
-     position: absolute;
-      right: 0;
-      margin-right: 1rem;
-      height: 150px;
-      margin-top: -10rem;
-  }
- 
-  .guirlande8{
-     position: absolute;
-      right: 0;
-      margin-right: 14rem;
-      margin-top: -9rem;
-      height: 150px;
-  }
- 
-  .guirlande9{
-     position: absolute;
-      right: 0;
-      margin-right: 30rem;
-      margin-top: -15rem;
-      height: 150px;
-  }
- 
-  .guirlande10{
-     position: absolute;
-      right: 0;
-      margin-right: 25rem;
-      margin-top: -9rem;
-      height: 150px;
-  }
- 
-  .guirlande11{
-     position: absolute;
-      right: 0;
-      margin-right: 10rem;
-      margin-top: -16rem;
-      height: 150px;
-  }
-
-  @keyframes move{
-    0%{
-        transform: translateY(0rem);
-    }
-    20%{
-        transform: translateX(1rem);
-    }
-    50%{
-        transform: rotateY(180deg);
-    }
-    70%{
-        transform: rotateX(90deg);
-    }
-
-  }
-
-  .etoile{
-    animation: move 5s linear infinite;
-  }
-
-  @keyframes move2{
-    0%{
-        transform: scale(1);
-    }
-    20%{
-        transform: scale(1.2);
-    }
-    50%{
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-  }
-
-  .cercle{
-    animation: move2 2s linear infinite;
-  }
-
-.banner{
-    width: 100%;
-    margin: 0;
-    background: #2e432eed;
-    opacity: .65;
-    border-bottom: 3px solid #6be3bd;
+body[data-theme=dark] {
+  background-color: #000000;
+  color: white;
+  -webkit-transition: background-color 1050ms ease-in-out;
+  transition: background-color 1050ms ease-in-out;
+  font-family: "Architects Daughter", cursive;
 }
 
 h1 {
-  margin: 1em 1rem 0;
   font-size: 3rem;
-  color: rgb(0, 128, 255);
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  width: 100%;
+  text-align: center;
+}
+
+.eJLJkT {
+  margin-right: 1rem !important;
+  right: 0 !important;
+  position: absolute !important;
+  height: 32px;
+  width: 80px;
+  top: 0 !important;
+  padding-top: 2rem !important;
 }
 
 h2 {
   margin-bottom: 2em;
-  color: rgb(0, 128, 255);
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
 }
 
 .radio {
-  max-width: 1600px;
+  width: 100%;
+  margin-top: 5rem;
+  margin: 0 auto;
 }
 
 .filters {
@@ -284,14 +82,17 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 2rem;
-  margin: 1rem;
   font-size: 1.2rem;
+  width: 100%;
+  background: #000000;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
 }
 
 .filters span {
   margin: 1rem;
-  border: 2px solid #28342a;
+  border: 1px solid #6be3bd;
   border-radius: 10px;
   padding: 0.25em 0.75em;
   font-weight: 800;
@@ -299,18 +100,17 @@ h2 {
 
 .filters span:hover {
   cursor: pointer;
-  border-color: #6be3bd;
-  background: #1e352d;
-  color: white;
+  color: #8e8f90;
+  background: #6f6f6f63;
 }
 
 .filters .selected {
-    border-color: #6be3bd;
-    background: #1e352d;
-    color: white;
+  background: #6f6f6f63;
+  color: #8e8f90;
 }
 
 .stations {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,7 +127,7 @@ h2 {
 .station {
   width: 400px;
   font-size: 1.4rem;
-  border: 1px solid #3e5f4a;
+  border: 3px solid #b1b1b1;
   margin: 0.25em;
   border-radius: 10px;
   padding: 1em;
@@ -347,9 +147,8 @@ h2 {
 }
 
 .station:hover {
-  border-color: #6be3bd;
-  background: #1e352d;
-  color: white;
+  border-color: black;
+  background: #6f6f6f63;
 }
 
 .stationName {
@@ -365,9 +164,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: flex-start;
-      -ms-flex-pack: flex-start;
-          justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .name {
@@ -377,9 +176,8 @@ h2 {
 
 .stationName img {
   display: block;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 50%;
+  width: 4.5em;
+  height: 4.5em;
   border: 2px solid #3e5f4a;
   margin: 0 0.25em;
 }
@@ -418,10 +216,15 @@ audio {
 
 .footer {
   font-size: 30px;
+  text-align: center;
+  border-top: 1px solid white;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .footer p span {
   color: #3e5f4a;
+  padding: 1rem;
 }
 
 @media (max-width: 650px) {
