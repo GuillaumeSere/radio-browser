@@ -227,6 +227,26 @@ audio {
   padding: 1rem;
 }
 
+@media (max-width: 1700px) {
+    .animation-left{
+        height: 80px !important;
+        width: 150px !important;
+    }
+    .animation-right{
+        height: 80px !important;
+        width: 150px !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    .animation-left{
+        display: none !important;
+    }
+    .animation-right{
+        display: none !important;
+    }
+}
+
 @media (max-width: 650px) {
   .footer {
     font-size: 18px;

@@ -58,6 +58,7 @@ const Radio = () => {
                     autoplay
                     loop
                     src={animation}
+                    className='animation-left'
                     style={{ height: '100px', width: '300px' }}
                 >
                 </Player>
@@ -74,6 +75,7 @@ const Radio = () => {
                     autoplay
                     loop
                     src={animation}
+                    className="animation-right"
                     style={{ height: '100px', width: '300px' }}
                 >
                 </Player>
