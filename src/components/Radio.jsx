@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import defaultImage from "../radio.jpg";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { Player } from '@lottiefiles/react-lottie-player';
+import animation from './113171-music-green.json'
 const RadioBrowser = require('radio-browser')
 
 const Radio = () => {
@@ -52,6 +54,13 @@ const Radio = () => {
     return (
         <div className="radio">
             <div className="filters">
+                <Player
+                    autoplay
+                    loop
+                    src={animation}
+                    style={{ height: '100px', width: '300px' }}
+                >
+                </Player>
                 {filters.map((filter, index) => (
                     <span
                         key={index}
@@ -61,6 +70,13 @@ const Radio = () => {
                         {filter}
                     </span>
                 ))}
+                <Player
+                    autoplay
+                    loop
+                    src={animation}
+                    style={{ height: '100px', width: '300px' }}
+                >
+                </Player>
             </div>
             <div className="stations">
                 {stations &&
