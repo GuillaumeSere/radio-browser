@@ -254,4 +254,7 @@ audio {
   .station {
     width: 320px;
   }
+  .dark {
+    display: none;
+  }
 }
