@@ -29,7 +29,10 @@
 }
 
 body[data-theme=light] {
-  background-color: #ffffff;
+background:url(./bg.png) no-repeat;
+  background-size: cover;
+  background-position: calc(top - 19%);
+  background-attachment: fixed;
   color: rgb(255, 255, 255);
   -webkit-transition: background-color 1050ms ease-in-out;
   transition: background-color 1050ms ease-in-out;
@@ -37,7 +40,10 @@ body[data-theme=light] {
 }
 
 body[data-theme=dark] {
-  background-color: #000000;
+  background:url(./bg.png) no-repeat;
+  background-size: cover;
+  background-position: calc(top - 19%);
+  background-attachment: fixed;
   color: white;
   -webkit-transition: background-color 1050ms ease-in-out;
   transition: background-color 1050ms ease-in-out;
@@ -133,7 +139,7 @@ h2 {
   margin: 1.25rem;
   border: 2px solid #ffffffad;
   border-radius: 10px;
-  background: #000000;
+  background: #0000008b;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
