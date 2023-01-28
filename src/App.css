@@ -22,7 +22,7 @@
 ::-webkit-scrollbar-track {
   background: black;
 }
-
+    
 ::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 25px;
@@ -48,6 +48,7 @@ h1 {
   font-size: 3rem;
   width: 100%;
   text-align: center;
+  color: rgb(2, 253, 2);
 }
 
 .dark {
@@ -92,24 +93,26 @@ h2 {
 
 .filters span {
   margin: 1rem;
-  border: 1px solid #6be3bd;
+  border: 2px solid #ffffffad;
   border-radius: 10px;
+  color: rgb(2, 253, 2);
   padding: 0.25em 0.75em;
   font-weight: 800;
 }
 
 .filters span:hover {
   cursor: pointer;
-  color: #8e8f90;
+  color: rgb(127, 240, 127);
   background: #6f6f6f63;
 }
 
 .filters .selected {
   background: #6f6f6f63;
-  color: #8e8f90;
+  color: rgb(2, 253, 2);
 }
 
 .stations {
+    margin: 2rem;
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,8 +130,8 @@ h2 {
 .station {
   width: 400px;
   font-size: 1.4rem;
-  border: 3px solid #b1b1b1;
-  margin: 0.25em;
+  margin: 1.25rem;
+  border: 2px solid #ffffffad;
   border-radius: 10px;
   padding: 1em;
   display: -webkit-box;
@@ -147,8 +150,7 @@ h2 {
 }
 
 .station:hover {
-  border-color: black;
-  background: #6f6f6f63;
+  border-color: rgb(12, 254, 3);
 }
 
 .stationName {
