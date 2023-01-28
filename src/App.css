@@ -29,8 +29,8 @@
 }
 
 body[data-theme=light] {
-  background-color: #b5b5b5;
-  color: black;
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
   -webkit-transition: background-color 1050ms ease-in-out;
   transition: background-color 1050ms ease-in-out;
   font-family: "Architects Daughter", cursive;
@@ -133,7 +133,7 @@ h2 {
   margin: 1.25rem;
   border: 2px solid #ffffffad;
   border-radius: 10px;
-  background: #0000003d;
+  background: #000000;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
