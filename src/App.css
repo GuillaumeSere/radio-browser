@@ -29,7 +29,7 @@
 }
 
 body[data-theme=light] {
-  background-color: #d7d7d7;
+  background-color: #b5b5b5;
   color: black;
   -webkit-transition: background-color 1050ms ease-in-out;
   transition: background-color 1050ms ease-in-out;
@@ -133,6 +133,7 @@ h2 {
   margin: 1.25rem;
   border: 2px solid #ffffffad;
   border-radius: 10px;
+  background: #0000003d;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;

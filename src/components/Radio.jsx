@@ -84,7 +84,7 @@ const Radio = () => {
                 {stations &&
                     stations.map((station, index) => {
                         return (
-                            <div className="station" key={index}>
+                            <div className="station" key={index} >
                                 <div className="stationName">
                                     <img
                                         className="logo"
