@@ -110,11 +110,13 @@ h2 {
   cursor: pointer;
   color: rgb(127, 240, 127);
   background: #6f6f6f63;
+  border: 2px solid  rgb(2, 253, 2);
 }
 
 .filters .selected {
   background: #6f6f6f63;
   color: rgb(2, 253, 2);
+  border: 2px solid  rgb(2, 253, 2);
 }
 
 .stations {
