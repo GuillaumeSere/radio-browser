@@ -52,9 +52,25 @@ body[data-theme=dark] {
 
 h1 {
   font-size: 3rem;
-  width: 100%;
   text-align: center;
-  color: rgb(2, 253, 2);
+  color: transparent;
+  background: linear-gradient(90deg, rgb(51, 255, 0), rgba(154, 114, 38, 0.469), rgb(0, 255, 55), green, rgb(0, 255, 153), rgb(128, 73, 0));
+  background-clip: text;
+  transition: 0.5s ease-in-out;
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: -1000px 0;
+    }
+    50%,
+    100% {
+        background-position: 1000px 0;
+    }
+    100% {
+        background-position: -1000px 0;
+    }
 }
 
 .dark {
@@ -114,7 +130,7 @@ h2 {
 }
 
 .filters .selected {
-  background: #6f6f6f63;
+  background: #6f9e5b63;
   color: rgb(2, 253, 2);
   border: 2px solid  rgb(2, 253, 2);
 }
