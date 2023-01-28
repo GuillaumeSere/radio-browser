@@ -31,7 +31,7 @@
 body[data-theme=light] {
 background:url(./bg2.png) no-repeat;
   background-size: cover;
-  background-position: calc(top - 19%);
+  background-position: center;
   background-attachment: fixed;
   color: rgb(255, 255, 255);
   -webkit-transition: background-color 1050ms ease-in-out;
@@ -42,7 +42,7 @@ background:url(./bg2.png) no-repeat;
 body[data-theme=dark] {
   background:url(./bg.png) no-repeat;
   background-size: cover;
-  background-position: calc(top - 19%);
+  background-position: center;
   background-attachment: fixed;
   color: white;
   -webkit-transition: background-color 1050ms ease-in-out;
