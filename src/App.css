@@ -29,7 +29,7 @@
 }
 
 body[data-theme=light] {
-background:url(./bg.png) no-repeat;
+background:url(./bg2.png) no-repeat;
   background-size: cover;
   background-position: calc(top - 19%);
   background-attachment: fixed;
@@ -250,7 +250,7 @@ audio {
 }
 
 .footer p span {
-  color: #3e5f4a;
+  color: #01ff5e;
   padding: 1rem;
 }
 
