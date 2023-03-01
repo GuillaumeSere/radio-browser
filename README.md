@@ -1,7 +1,6 @@
 # LIVE RADIO
 
 
+![20230128161902](https://user-images.githubusercontent.com/75996200/222157896-67ca991a-685e-464c-8eec-13494f205bdb.png)
 
-
-![20221221162025](https://user-images.githubusercontent.com/75996200/208940245-d41db3ab-235b-42a6-87ac-fd26b7a76c34.png)
 
