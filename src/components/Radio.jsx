@@ -9,10 +9,10 @@ const RadioBrowser = require('radio-browser')
 const Radio = () => {
     const [stations, setStations] = useState();
     const [stationFilter, setStationFilter] = useState("all");
+    const [currentStation, setCurrentStation] = useState(null);
 
     useEffect(() => {
         setupApi(stationFilter).then((data) => {
-            console.log(data);
             setStations(data);
         });
     }, [stationFilter]);
@@ -51,6 +51,10 @@ const Radio = () => {
         event.target.src = defaultImage;
     };
 
+    const handleStationClick = (url) => {
+        setCurrentStation(url);
+    }
+
     return (
         <div className="radio">
             <div className="filters">
@@ -84,7 +88,7 @@ const Radio = () => {
                 {stations &&
                     stations.map((station, index) => {
                         return (
-                            <div className="station" key={index} >
+                            <div className="station" key={index} onClick={() => handleStationClick(station.url_resolved)}>
                                 <div className="stationName">
                                     <img
                                         className="logo"
@@ -94,10 +98,9 @@ const Radio = () => {
                                     />
                                     <div className="name">{station.name}</div>
                                 </div>
-
                                 <AudioPlayer
                                     className="player"
-                                    src={station.url_resolved}
+                                    src={currentStation}
                                     showJumpControls={false}
                                     layout="stacked"
                                     customProgressBarSection={[]}
@@ -115,4 +118,4 @@ const Radio = () => {
     )
 }
 
-export default Radio
+export default Radio;
