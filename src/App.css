@@ -125,9 +125,9 @@ h2 {
 
 .filters span:hover {
   cursor: pointer;
-  color: #8000ff;
-  background: white;
-  border: 2px solid  #8000ff;
+  color: white;
+  background: #8000ff;
+  border: 2px solid  white;
 }
 
 .filters .selected {
