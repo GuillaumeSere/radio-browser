@@ -31,7 +31,7 @@
 body[data-theme=light] {
 background:url(./bg2.png) no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:center;
   background-attachment: fixed;
   color: rgb(255, 255, 255);
   -webkit-transition: background-color 1050ms ease-in-out;
@@ -40,7 +40,7 @@ background:url(./bg2.png) no-repeat;
 }
 
 body[data-theme=dark] {
-  background:url(./bg.png) no-repeat;
+  background:url(./bg3.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -136,7 +136,6 @@ h2 {
 }
 
 .stations {
-    margin: 2rem;
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
