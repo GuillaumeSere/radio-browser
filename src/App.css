@@ -238,7 +238,7 @@ audio {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: #08f328 !important;
+  fill: #c18bee !important;
 }
 
 .footer {
@@ -250,7 +250,7 @@ audio {
 }
 
 .footer p span {
-  color: #01ff5e;
+  color: #8103ffba;
   padding: 1rem;
 }
 
