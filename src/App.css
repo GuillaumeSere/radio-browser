@@ -247,6 +247,7 @@ audio {
   border-top: 1px solid white;
   margin-top: 1rem;
   padding: 1rem;
+  background: #000000;
 }
 
 .footer p span {
