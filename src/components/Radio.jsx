@@ -3,7 +3,7 @@ import defaultImage from "../radio.jpg";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { Player } from '@lottiefiles/react-lottie-player';
-import animation from './113171-music-green.json'
+import animation from './97959-music-visualizer.json'
 const RadioBrowser = require('radio-browser')
 
 const Radio = () => {

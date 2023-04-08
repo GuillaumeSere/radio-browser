@@ -11,7 +11,7 @@
 
 .banner {
   border-bottom: 2px solid white;
-  background: #0000008f;
+  background: #000000;
   color: white;
 }
 
@@ -54,7 +54,7 @@ h1 {
   font-size: 3rem;
   text-align: center;
   color: transparent;
-  background: linear-gradient(90deg, rgb(51, 255, 0), rgba(154, 114, 38, 0.469), rgb(0, 255, 55), rgba(0, 128, 0, 0.56), rgb(0, 255, 153), rgba(128, 73, 0, 0.463));
+  background: linear-gradient(90deg, rgb(119, 0, 255), rgb(190, 190, 190), rgb(235, 223, 244), rgb(185, 185, 185), rgb(162, 0, 255), rgba(197, 197, 197, 0.985));
   background-clip: text;
   transition: 0.5s ease-in-out;
   animation: move 30s linear infinite;
@@ -69,7 +69,7 @@ h1 {
         background-position: 1000px 0;
     }
     100% {
-        background-position: -1500px 0;
+        background-position: -1000px 0;
     }
 }
 
@@ -107,7 +107,7 @@ h2 {
           justify-content: center;
   font-size: 1.2rem;
   width: 100%;
-  background: #0000008f;
+  background: #000000fa;
   color: white;
   border-bottom: 2px solid white;
   margin-bottom: 1rem;
@@ -117,22 +117,23 @@ h2 {
   margin: 1rem;
   border: 2px solid #ffffffad;
   border-radius: 10px;
-  color: rgb(2, 253, 2);
+  color: #8000ff;
+  background: #0000008a;
   padding: 0.25em 0.75em;
   font-weight: 800;
 }
 
 .filters span:hover {
   cursor: pointer;
-  color: rgb(127, 240, 127);
-  background: #6f6f6f63;
-  border: 2px solid  rgb(2, 253, 2);
+  color: #8000ff;
+  background: white;
+  border: 2px solid  #8000ff;
 }
 
 .filters .selected {
-  background: #6f9e5b63;
-  color: rgb(2, 253, 2);
-  border: 2px solid  rgb(2, 253, 2);
+  background: #8000ff;
+  color: white;
+  border: 2px solid  #ffffffba;
 }
 
 .stations {
@@ -174,7 +175,7 @@ h2 {
 }
 
 .station:hover {
-  border-color: rgb(12, 254, 3);
+  border-color: #8103ffba;
 }
 
 .stationName {
@@ -213,7 +214,7 @@ audio {
 }
 
 .rhap_container.player {
-  background-color: #1eff0345;
+  background-color: #8103ffba;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
