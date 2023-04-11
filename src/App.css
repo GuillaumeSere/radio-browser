@@ -137,7 +137,6 @@ h2 {
 }
 
 .stations {
-  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
