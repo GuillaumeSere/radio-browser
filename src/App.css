@@ -126,14 +126,14 @@ h2 {
 .filters span:hover {
   cursor: pointer;
   color: white;
-  background: #8000ff;
-  border: 2px solid  white;
+  background: black;
+  border: 2px solid  #8000ff;
 }
 
 .filters .selected {
-  background: #8000ff;
+  background: black;
   color: white;
-  border: 2px solid  #ffffffba;
+  border: 2px solid  #8000ff;
 }
 
 .stations {
