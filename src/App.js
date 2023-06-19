@@ -42,6 +42,7 @@ function App() {
       onChange={handleChangeTheme}
       checked={isDarkMode}
       className="dark"
+      size="20"
     />
     </div>
     <Radio />
