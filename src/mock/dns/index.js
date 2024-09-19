@@ -1,2 +1,3 @@
-module.exports = {}; 
-module.exports.default = {};
+ 
+const _default = {};
+export { _default as default };

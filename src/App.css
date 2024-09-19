@@ -89,7 +89,9 @@ h2 {
 }
 
 .radio {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   margin-top: 5rem;
   margin: 0 auto;
 }
@@ -179,6 +181,7 @@ h2 {
 }
 
 .stations {
+    flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
