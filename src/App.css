@@ -196,7 +196,7 @@ h2 {
 }
 
 .station {
-  width: 400px;
+  width: 975px;
   font-size: 1.4rem;
   margin: 1.25rem;
   border: 2px solid #8000ff;
@@ -210,12 +210,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .station:nth-child(1){
@@ -374,8 +368,9 @@ h2 {
   display: block;
   width: 4.5em;
   height: 4.5em;
-  border: 2px solid #7913ed;
+  border: 2px solid #ffffff;
   margin: 0 0.25em;
+  border-radius: 50%;
 }
 
 audio {
@@ -383,17 +378,47 @@ audio {
 }
 
 .rhap_container.player {
-  background-color: #8002feba;
+  margin: 0 auto;
+  background-color: #8002fe00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-items: center;
   padding: 0.25em 0.75em;
   border-radius: 10px;
+  width: 200px;
+}
+.rhap_controls-section {
+    flex-direction: column;
+}
+.rhap_volume-controls{
+    width: 100px;
 }
 
 .rhap_stacked .rhap_controls-section {
   margin-top: 0 !important;
+}
+.rhap_play-pause-button{
+    font-size: 72px !important;
+    height: 70px !important;
+    width: 70px !important;
+}
+
+.station-controls{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn:hover{
+    color: #8002feba;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .rhap_controls-section .rhap_volume-controls {
