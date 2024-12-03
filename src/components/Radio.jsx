@@ -111,7 +111,7 @@ const Radio = () => {
                 >
                 </Player>
             </div>
-            <Slides />
+            <Slides  />
             <div className="stations">
                 {stations && (
                     <div className="station" key={currentStationIndex}>

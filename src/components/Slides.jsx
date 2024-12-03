@@ -11,6 +11,7 @@ import img9 from '../images/image9.png';
 import img10 from '../images/image10.png';
 import img11 from '../images/image11.png';
 import img12 from '../images/image12.png';
+import img13 from '../images/image13.png';
 
 const Slides = () => {
     const images = [
@@ -26,6 +27,7 @@ const Slides = () => {
         img10,
         img11,
         img12,
+        img13,
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
