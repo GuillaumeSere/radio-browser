@@ -89,9 +89,9 @@ h2 {
 }
 
 .radio {
+    height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   margin-top: 5rem;
   margin: 0 auto;
 }
@@ -181,6 +181,7 @@ h2 {
 }
 
 .stations {
+    margin-bottom: 5rem;
     flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,6 +407,9 @@ audio {
     flex-direction: column;
     z-index: 1000;
 }
+.rhap_button-clear{
+    color:#8000ff !important;
+}
 
 .station-controls{
     position: relative;
@@ -440,17 +444,30 @@ audio {
 }
 
 .footer {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   border-top: 1px solid #8000ff;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-bottom: -1rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
   background: #000000;
 }
 
 .footer p span {
   color: #8103ffba;
   padding: 1rem;
+}
+
+.slides{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    height: 300px;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 1700px) {

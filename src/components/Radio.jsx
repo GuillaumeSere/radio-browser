@@ -6,6 +6,7 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { Player } from '@lottiefiles/react-lottie-player';
 import animation from './97959-music-visualizer.json'
+import Slides from './Slides';
 const RadioBrowser = require('radio-browser');
 
 
@@ -81,6 +82,7 @@ const Radio = () => {
     };
 
     return (
+        <>
         <div className="radio">
             <div className="filters">
                 <Player
@@ -109,6 +111,7 @@ const Radio = () => {
                 >
                 </Player>
             </div>
+            <Slides />
             <div className="stations">
                 {stations && (
                     <div className="station" key={currentStationIndex}>
@@ -137,10 +140,11 @@ const Radio = () => {
                     </div>
                 )}
             </div>
-            <div className="footer">
-                <p> Copyrights 2022, Developed by <span>Guillaume SERE </span>with React</p>
-            </div>
         </div>
+         <div className="footer">
+         <p> Copyrights 2022, Developed by <span>Guillaume SERE </span>with React</p>
+     </div>
+     </>
     )
 }
 
