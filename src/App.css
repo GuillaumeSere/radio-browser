@@ -196,6 +196,7 @@ h2 {
 }
 
 .station {
+  height: 95px;
   width: 975px;
   font-size: 1.4rem;
   margin: 1.25rem;
@@ -388,11 +389,9 @@ audio {
   border-radius: 10px;
   width: 200px;
 }
-.rhap_controls-section {
-    flex-direction: column;
-}
+
 .rhap_volume-controls{
-    width: 100px;
+    display: block;
 }
 
 .rhap_stacked .rhap_controls-section {
@@ -402,6 +401,10 @@ audio {
     font-size: 72px !important;
     height: 70px !important;
     width: 70px !important;
+}
+.rhap_volume-container{
+    flex-direction: column;
+    z-index: 1000;
 }
 
 .station-controls{
@@ -419,6 +422,7 @@ audio {
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
+    margin-top: -5rem;
 }
 
 .rhap_controls-section .rhap_volume-controls {
