@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/radio-browser/static/css/main.e3c7cb36.css",
-    "main.js": "/radio-browser/static/js/main.190576e3.js",
-    "static/media/bg3.png": "/radio-browser/static/media/bg3.76a49ef8810ca655d3cd.png",
-    "static/media/bg2.png": "/radio-browser/static/media/bg2.c924c577669b66070252.png",
+    "main.css": "/radio-browser/static/css/main.20feb443.css",
+    "main.js": "/radio-browser/static/js/main.c3dde6b7.js",
+    "static/media/bg2.png": "/radio-browser/static/media/bg2.de70757c9926eacbffb1.png",
+    "static/media/bg3.png": "/radio-browser/static/media/bg3.ee851a19451b9fea5967.png",
     "static/media/radio.jpg": "/radio-browser/static/media/radio.6085ad7266251f3d7e66.jpg",
     "index.html": "/radio-browser/index.html",
-    "main.e3c7cb36.css.map": "/radio-browser/static/css/main.e3c7cb36.css.map",
-    "main.190576e3.js.map": "/radio-browser/static/js/main.190576e3.js.map"
+    "main.20feb443.css.map": "/radio-browser/static/css/main.20feb443.css.map",
+    "main.c3dde6b7.js.map": "/radio-browser/static/js/main.c3dde6b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3c7cb36.css",
-    "static/js/main.190576e3.js"
+    "static/css/main.20feb443.css",
+    "static/js/main.c3dde6b7.js"
   ]
 }
