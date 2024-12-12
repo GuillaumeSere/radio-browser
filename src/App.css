@@ -405,7 +405,7 @@ audio {
     z-index: 1000;
 }
 .rhap_button-clear{
-    color:#8000ff !important;
+    color:#838383 !important;
 }
 .rhap_volume-button{
     margin-right: -139px !important;
@@ -419,6 +419,7 @@ audio {
 
 .btn:hover{
     color: #8002feba;
+    background-color: #000000;
 }
 
 .btn{
@@ -440,7 +441,8 @@ audio {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: #c18bee !important;
+  fill: #8002feba !important;
+  border:1px solid black;
 }
 
 .footer {
