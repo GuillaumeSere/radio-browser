@@ -194,7 +194,7 @@ h2 {
 
 .station {
   height: 95px;
-  width: 975px;
+  width: 400px;
   font-size: 1.4rem;
   margin: 1.25rem;
   border: 2px solid #8000ff;
@@ -389,6 +389,7 @@ audio {
 
 .rhap_volume-controls{
     display: block;
+    margin-top: -1rem;
 }
 
 .rhap_stacked .rhap_controls-section {
