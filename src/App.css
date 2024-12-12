@@ -407,6 +407,9 @@ audio {
 .rhap_button-clear{
     color:#8000ff !important;
 }
+.rhap_volume-button{
+    margin-right: -139px !important;
+}
 
 .station-controls{
     position: relative;
