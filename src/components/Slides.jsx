@@ -12,6 +12,17 @@ import img10 from '../images/image10.png';
 import img11 from '../images/image11.png';
 import img12 from '../images/image12.png';
 import img13 from '../images/image13.png';
+import img14 from '../images/image14.png';
+import img15 from '../images/image15.png';
+import img16 from '../images/image16.png';
+import img17 from '../images/image17.png';
+import img18 from '../images/image18.png';
+import img19 from '../images/image19.png';
+import img20 from '../images/image20.png';
+import img21 from '../images/image21.png';
+import img22 from '../images/image22.png';
+import img23 from '../images/image23.png';
+import img24 from '../images/image24.png';
 
 const Slides = () => {
     const images = [
@@ -28,6 +39,17 @@ const Slides = () => {
         img11,
         img12,
         img13,
+        img14,
+        img15,
+        img16,
+        img17,
+        img18,
+        img19,
+        img20,
+        img21,
+        img22,
+        img23,
+        img24,
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +57,7 @@ const Slides = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); // Change d'image toutes les 3 secondes
+        }, 4000); // Change d'image toutes les 4 secondes
 
         return () => clearInterval(interval);
     }, [images.length]);
