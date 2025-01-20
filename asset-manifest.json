@@ -1,29 +1,40 @@
 {
   "files": {
-    "main.css": "/radio-browser/static/css/main.fe118de0.css",
-    "main.js": "/radio-browser/static/js/main.3daef1a4.js",
+    "main.css": "/radio-browser/static/css/main.767a2edd.css",
+    "main.js": "/radio-browser/static/js/main.876e09a7.js",
     "static/media/bg2.png": "/radio-browser/static/media/bg2.de70757c9926eacbffb1.png",
-    "static/media/bg3.png": "/radio-browser/static/media/bg3.ee851a19451b9fea5967.png",
     "static/media/image12.png": "/radio-browser/static/media/image12.6bde136b7b1656c6f43e.png",
     "static/media/image4.png": "/radio-browser/static/media/image4.922dd329b85bcc3f5d3e.png",
+    "static/media/image16.png": "/radio-browser/static/media/image16.fc3e6c5408e158382247.png",
     "static/media/image1.png": "/radio-browser/static/media/image1.499a1f0c419b685a2b80.png",
+    "static/media/image20.png": "/radio-browser/static/media/image20.3f15905d735bc3401c22.png",
     "static/media/image6.png": "/radio-browser/static/media/image6.26743b3ed3c078473af3.png",
+    "static/media/bg3.png": "/radio-browser/static/media/bg3.f5f68bf2554398dbc8d1.png",
+    "static/media/image19.png": "/radio-browser/static/media/image19.3d3cd5602534c4ac44c5.png",
+    "static/media/image17.png": "/radio-browser/static/media/image17.066a30564ad3b9e0599f.png",
     "static/media/image9.png": "/radio-browser/static/media/image9.7f41f9891a04e2c82ee8.png",
     "static/media/image7.png": "/radio-browser/static/media/image7.bdc6c2ec44809ca01472.png",
+    "static/media/image24.png": "/radio-browser/static/media/image24.546f8f573d4510688651.png",
+    "static/media/image22.png": "/radio-browser/static/media/image22.272c409d66945d69f145.png",
     "static/media/radio.jpg": "/radio-browser/static/media/radio.6085ad7266251f3d7e66.jpg",
+    "static/media/image15.png": "/radio-browser/static/media/image15.c7fd1b2d0c4ecc2f7a92.png",
     "static/media/image2.png": "/radio-browser/static/media/image2.ea3f86c19ada0c034f4e.png",
     "static/media/image8.png": "/radio-browser/static/media/image8.9f3851ccb4dff6804cf1.png",
+    "static/media/image14.png": "/radio-browser/static/media/image14.ab0c8220149d2cdb4381.png",
     "static/media/image11.png": "/radio-browser/static/media/image11.98d8cf33566d1bae708c.png",
+    "static/media/image18.png": "/radio-browser/static/media/image18.36d8ead05dfd49e9700c.png",
     "static/media/image3.png": "/radio-browser/static/media/image3.b2ad63905b61d984dc5d.png",
+    "static/media/image23.png": "/radio-browser/static/media/image23.3cd6184238fba44677ba.png",
+    "static/media/image21.png": "/radio-browser/static/media/image21.9dcb956cab2c570bd2b0.png",
     "static/media/image10.png": "/radio-browser/static/media/image10.cc1c9b804c45927846e8.png",
     "static/media/image13.png": "/radio-browser/static/media/image13.08a8668997a6e3cae85d.png",
     "static/media/image5.png": "/radio-browser/static/media/image5.1016983d24f13f31e2b1.png",
     "index.html": "/radio-browser/index.html",
-    "main.fe118de0.css.map": "/radio-browser/static/css/main.fe118de0.css.map",
-    "main.3daef1a4.js.map": "/radio-browser/static/js/main.3daef1a4.js.map"
+    "main.767a2edd.css.map": "/radio-browser/static/css/main.767a2edd.css.map",
+    "main.876e09a7.js.map": "/radio-browser/static/js/main.876e09a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe118de0.css",
-    "static/js/main.3daef1a4.js"
+    "static/css/main.767a2edd.css",
+    "static/js/main.876e09a7.js"
   ]
 }
