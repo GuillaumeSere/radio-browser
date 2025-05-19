@@ -1,12 +1,19 @@
 import './App.css';
 import Radio from './components/Radio';
-import Snowfall from 'react-snowfall';
+import MoneyRain from './components/MoneyRain';
 import DayNightToggle from 'react-day-and-night-toggle'
 import { useState } from 'react';
+
+
+import bill1 from './assets/bill1.png';
+import bill2 from './assets/bill2.png';
+import bill3 from './assets/bill3.png';
 
 function App() {
 
     const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('data-theme') === 'dark' ? true : false)
+
+    const moneyImages = [bill1, bill2, bill3];
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       const newColorScheme = e.matches ? 'dark' : 'light'
@@ -30,13 +37,7 @@ function App() {
   return (
     <div className="App">
     <div className="banner">
-     <Snowfall
-     style={{
-        position: 'fixed',
-        width: '100vw',
-        height: '100vh',
-      }}
-    /> 
+     <MoneyRain />
     <h1>SEARCH RADIO</h1>
     <DayNightToggle
       onChange={handleChangeTheme}
