@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/radio-browser/static/css/main.8833ebb8.css",
-    "main.js": "/radio-browser/static/js/main.7f4ac48c.js",
+    "main.css": "/radio-browser/static/css/main.048ff26d.css",
+    "main.js": "/radio-browser/static/js/main.de8a1d37.js",
     "static/media/bg3.png": "/radio-browser/static/media/bg3.5ef0cc2cb2a4d1cb04ec.png",
     "static/media/bg2.png": "/radio-browser/static/media/bg2.51a31ac56bae839982a9.png",
     "static/media/image12.png": "/radio-browser/static/media/image12.6bde136b7b1656c6f43e.png",
@@ -21,20 +21,23 @@
     "static/media/image2.png": "/radio-browser/static/media/image2.ea3f86c19ada0c034f4e.png",
     "static/media/image8.png": "/radio-browser/static/media/image8.9f3851ccb4dff6804cf1.png",
     "static/media/image14.png": "/radio-browser/static/media/image14.ab0c8220149d2cdb4381.png",
+    "static/media/bill1.png": "/radio-browser/static/media/bill1.e9bf2acdbdbffd66e316.png",
     "static/media/image11.png": "/radio-browser/static/media/image11.98d8cf33566d1bae708c.png",
     "static/media/image18.png": "/radio-browser/static/media/image18.36d8ead05dfd49e9700c.png",
     "static/media/image3.png": "/radio-browser/static/media/image3.b2ad63905b61d984dc5d.png",
     "static/media/image23.png": "/radio-browser/static/media/image23.3cd6184238fba44677ba.png",
+    "static/media/bill3.png": "/radio-browser/static/media/bill3.8bb16182a46ee2626ef0.png",
     "static/media/image21.png": "/radio-browser/static/media/image21.9dcb956cab2c570bd2b0.png",
+    "static/media/bill2.png": "/radio-browser/static/media/bill2.418776031c4d39850392.png",
     "static/media/image10.png": "/radio-browser/static/media/image10.cc1c9b804c45927846e8.png",
     "static/media/image13.png": "/radio-browser/static/media/image13.08a8668997a6e3cae85d.png",
     "static/media/image5.png": "/radio-browser/static/media/image5.1016983d24f13f31e2b1.png",
     "index.html": "/radio-browser/index.html",
-    "main.8833ebb8.css.map": "/radio-browser/static/css/main.8833ebb8.css.map",
-    "main.7f4ac48c.js.map": "/radio-browser/static/js/main.7f4ac48c.js.map"
+    "main.048ff26d.css.map": "/radio-browser/static/css/main.048ff26d.css.map",
+    "main.de8a1d37.js.map": "/radio-browser/static/js/main.de8a1d37.js.map"
   },
   "entrypoints": [
-    "static/css/main.8833ebb8.css",
-    "static/js/main.7f4ac48c.js"
+    "static/css/main.048ff26d.css",
+    "static/js/main.de8a1d37.js"
   ]
 }
