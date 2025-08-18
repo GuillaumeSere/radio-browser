@@ -31,7 +31,7 @@ function App() {
     <div className="App">
     <div className="banner">
      <MoneyRain />
-    <h1>SEARCH RADIO</h1>
+    <h1>LIVE - RADIO</h1>
     <DayNightToggle
       onChange={handleChangeTheme}
       checked={isDarkMode}
