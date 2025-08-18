@@ -198,7 +198,7 @@ h2 {
   width: 400px;
   font-size: 1.4rem;
   margin: 1.25rem;
-  border: 2px solid rgb(1, 15, 139);
+  border: 2px solid rgb(1, 125, 139);
   border-radius: 10px;
   background: #0000008b;
   padding: 1em;
@@ -333,7 +333,7 @@ h2 {
 }
 
 .station:hover {
-  border-color: rgb(1, 15, 139);
+  border-color: rgb(1, 125, 139);
   background: #000000;
 }
 
@@ -425,7 +425,7 @@ audio {
 }
 
 .btn:hover{
-    color: rgb(1, 15, 139);
+    color: rgb(1, 125, 139);
     background-color: #000000;
 }
 
@@ -455,15 +455,15 @@ audio {
 .footer {
   font-size: 20px;
   text-align: center;
-  border-top: 1px solid rgb(1, 15, 139);
   margin-bottom: -1rem;
   padding: 0.5rem;
   padding-bottom: 1rem;
-  background: #000000;
+  background: #00000080;
 }
 
 .footer p span {
-  color: rgb(1, 15, 139);
+  color: rgb(1, 125, 139);
+  font-weight: 800;
   padding: 1rem;
 }
 

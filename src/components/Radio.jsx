@@ -142,7 +142,7 @@ const Radio = () => {
             </div>
         </div>
          <div className="footer">
-         <p> Copyrights 2022, Developed by <span>Guillaume SERE </span>with React</p>
+         <p> &copy; 2022, Developed by <span>Guillaume SERE </span>with React</p>
      </div>
      </>
     )
