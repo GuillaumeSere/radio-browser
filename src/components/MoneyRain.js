@@ -15,7 +15,7 @@ const MoneyRain = () => {
             transform: `rotate(${Math.random() * 360}deg)`,
           }}
         >
-          🎼​
+          
         </div>
       ))}
     </div>

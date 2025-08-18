@@ -399,7 +399,7 @@ audio {
   margin-top: 0 !important;
 }
 .rhap_play-pause-button{
-    font-size: 72px !important;
+    font-size: 50px !important;
     height: 70px !important;
     width: 70px !important;
 }
@@ -411,7 +411,13 @@ audio {
     color:#838383 !important;
 }
 .rhap_volume-button{
-    margin-right: -139px !important;
+    margin-right: -50px !important;
+    font-size: 20px !important;
+    margin-bottom: -14px !important;
+}
+.rhap_volume-bar{
+    width: 50% !important;
+    margin-bottom: 1rem !important;
 }
 
 .station-controls{
@@ -444,7 +450,7 @@ audio {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: rgb(1, 15, 139) !important;
+  fill: rgb(255, 255, 255) !important;
   border:1px solid black;
 }
 
@@ -508,4 +514,10 @@ audio {
   .filters {
   font-size: 0.8rem;
   }
+  h1 {
+  font-size: 2rem;
+}
+.slides{
+    height: 200px; /* Hauteur fixe */
+}
 }
