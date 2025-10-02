@@ -527,29 +527,55 @@ audio {
     padding: 1rem;
 }
 
-.slides {
-  margin: 0 auto;
+/* wrapper garde ton centrage par flex */
+.slides-wrapper {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   max-width: 100%;
-  height: 300px; /* Hauteur fixe */
+}
+
+.slides {
+  position: relative; 
+  margin-top: -1rem;  
+  width: 100%;
+  max-width: 100%;
+  height: 400px;      
   overflow: hidden;
 }
 
-.slides img {
+.slide {
+  position: absolute;  
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  will-change: opacity, transform;
 }
 
-.fade {
-  animation: fadeEffect 2.5s ease-in-out;
+/* réglages d'animation */
+.fade-in {
+  animation: fadeIn forwards 1s ease-in-out; 
+  z-index: 2;
 }
 
-@keyframes fadeEffect {
-  from { opacity: 0.1; }
-  to { opacity: 1.2; }
+.fade-out {
+  animation: fadeOut forwards 1s ease-in-out;
+  z-index: 1;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.02); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.98); }
+}
+
+
 
 
 @media (max-width: 1700px) {

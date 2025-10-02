@@ -25,34 +25,44 @@ import img23 from '../images/image23.png';
 import img24 from '../images/image24.png';
 
 const Slides = () => {
-  const images = [
-    img1, img2, img3, img4, img5, img6, img7, img8,
-    img9, img10, img11, img12, img13, img14, img15, img16,
-    img17, img18, img19, img20, img21, img22, img23, img24,
-  ];
+    const images = [
+        img1, img2, img3, img4, img5, img6, img7, img8,
+        img9, img10, img11, img12, img13, img14, img15, img16,
+        img17, img18, img19, img20, img21, img22, img23, img24,
+    ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [prevIndex, setPrevIndex] = useState(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        (prevIndex + 1) % images.length
-      );
-    }, 4000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setPrevIndex(currentIndex);
+            setCurrentIndex((prev) =>
+                (prev + 1) % images.length
+            );
+        }, 4000);
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+        return () => clearInterval(interval);
+    }, [currentIndex, images.length]);
 
-  return (
-    <div className="slides">
-      <img
-        key={currentIndex}
-        src={images[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
-        className="slide fade"
-      />
-    </div>
-  );
+    return (
+        <div className="slides">
+            {prevIndex !== null && (
+                <img
+                    key={prevIndex}
+                    src={images[prevIndex]}
+                    alt={`Slide ${prevIndex + 1}`}
+                    className="slide fade-out"
+                />
+            )}
+            <img
+                key={currentIndex}
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex + 1}`}
+                className="slide fade-in"
+            />
+        </div>
+    );
 };
 
 export default Slides;
