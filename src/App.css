@@ -528,19 +528,29 @@ audio {
 }
 
 .slides {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    height: 300px;
-    /* Hauteur fixe */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 300px; /* Hauteur fixe */
+  overflow: hidden;
 }
 
 .slides img {
-    width: 100%;
-    height: 100%;
-    /* Hauteur fixe */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.fade {
+  animation: fadeEffect 2.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.1; }
+  to { opacity: 1.2; }
+}
+
 
 @media (max-width: 1700px) {
     .animation-left {

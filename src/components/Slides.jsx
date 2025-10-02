@@ -25,48 +25,36 @@ import img23 from '../images/image23.png';
 import img24 from '../images/image24.png';
 
 const Slides = () => {
-    const images = [
-        img1,
-        img2,
-        img3,
-        img4,
-        img5,
-        img6,
-        img7,
-        img8,
-        img9,
-        img10,
-        img11,
-        img12,
-        img13,
-        img14,
-        img15,
-        img16,
-        img17,
-        img18,
-        img19,
-        img20,
-        img21,
-        img22,
-        img23,
-        img24,
-    ];
+  const images = [
+    img1, img2, img3, img4, img5, img6, img7, img8,
+    img9, img10, img11, img12, img13, img14, img15, img16,
+    img17, img18, img19, img20, img21, img22, img23, img24,
+  ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 4000); // Change d'image toutes les 4 secondes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex + 1) % images.length
+      );
+    }, 4000);
 
-        return () => clearInterval(interval);
-    }, [images.length]);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
-    return (
-        <div className="slides">
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-        </div>
-    );
+  return (
+    <div className="slides">
+      <img
+        key={currentIndex}
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex + 1}`}
+        className="slide fade"
+      />
+    </div>
+  );
 };
 
 export default Slides;
+
+
