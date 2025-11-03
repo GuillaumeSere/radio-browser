@@ -144,6 +144,12 @@ const Radio = () => {
                     )}
                 </div>
 
+                <span className='description'>
+                    <p>Parcourez les radios par genre 🎵 
+                    Recherchez et trouvez votre station rapidement 🔍
+                    Ajoutez vos radios favorites ⭐ et retrouvez-les facilement</p>
+                </span>
+                
                 <Slides />
 
                 <div className="stations">
