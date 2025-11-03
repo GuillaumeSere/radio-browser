@@ -102,7 +102,7 @@ h2 {
 .search-container {
   position: relative;
   text-align: center;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 .search-container input {
@@ -182,6 +182,8 @@ h2 {
     background: #0095ff5c;
     padding: 0.25em 0.75em;
     font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .filters span:nth-child(3) {
@@ -598,7 +600,7 @@ audio {
   overflow: hidden;
 }
 
-.slide {
+.slide{
   position: absolute;  
   top: 0;
   left: 0;
