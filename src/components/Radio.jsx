@@ -21,11 +21,11 @@ const Radio = () => {
 
     // Charger les favoris depuis localStorage
     useEffect(() => {
-        const savedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
+        const savedFavs = JSON.parse(localStorage.getItem("favoris")) || [];
         setFavorites(savedFavs);
         setFavoritesLoaded(true);
 
-        if (stationFilter === "favorites") {
+        if (stationFilter === "favoris") {
             setStations(savedFavs);
             setCurrentStationIndex(0);
         }
@@ -34,7 +34,7 @@ const Radio = () => {
     // Sauvegarder les favoris dans localStorage
     useEffect(() => {
         if (!favoritesLoaded) return;
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        localStorage.setItem("favoris", JSON.stringify(favorites));
     }, [favorites, favoritesLoaded]);
 
     // Charger les stations selon le filtre
@@ -42,7 +42,7 @@ const Radio = () => {
         if (!favoritesLoaded) return;
         if (isUsingSuggestions) return;
 
-        if (stationFilter === "favorites ⭐") {
+        if (stationFilter === "favoris ⭐") {
             // Afficher uniquement les favoris
             setStations(favorites);
             setCurrentStationIndex(0);
@@ -61,7 +61,7 @@ const Radio = () => {
         const params = { language: "english", limit: 40 };
 
         if (searchTerm !== "") params.name = searchTerm;
-        else if (stationFilter !== "all" && stationFilter !== "favorites") params.tag = stationFilter;
+        else if (stationFilter !== "all" && stationFilter !== "favoris") params.tag = stationFilter;
 
         return await api.searchStations(params);
     };
@@ -81,7 +81,7 @@ const Radio = () => {
         setSuggestions([]);
     };
 
-    const filters = ["favorites ⭐", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
+    const filters = ["favoris ⭐", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
 
     const setDefaultSrc = (event) => event.target.src = defaultImage;
 
