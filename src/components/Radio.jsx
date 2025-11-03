@@ -42,7 +42,7 @@ const Radio = () => {
         if (!favoritesLoaded) return;
         if (isUsingSuggestions) return;
 
-        if (stationFilter === "favorites") {
+        if (stationFilter === "favorites ⭐") {
             // Afficher uniquement les favoris
             setStations(favorites);
             setCurrentStationIndex(0);
@@ -81,7 +81,7 @@ const Radio = () => {
         setSuggestions([]);
     };
 
-    const filters = ["favorites", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
+    const filters = ["favorites ⭐", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
 
     const setDefaultSrc = (event) => event.target.src = defaultImage;
 
