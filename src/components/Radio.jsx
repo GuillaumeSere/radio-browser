@@ -17,33 +17,51 @@ const Radio = () => {
     const [suggestions, setSuggestions] = useState([]);
     const [isUsingSuggestions, setIsUsingSuggestions] = useState(false);
     const [favorites, setFavorites] = useState([]);
+    const [favoritesLoaded, setFavoritesLoaded] = useState(false);
 
-    // Charger les favoris depuis localStorage au montage
+    // Charger les favoris depuis localStorage
     useEffect(() => {
         const savedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
         setFavorites(savedFavs);
+        setFavoritesLoaded(true);
+
+        if (stationFilter === "favorites") {
+            setStations(savedFavs);
+            setCurrentStationIndex(0);
+        }
     }, []);
 
-    // Sauvegarder les favoris dans localStorage à chaque changement
+    // Sauvegarder les favoris dans localStorage
     useEffect(() => {
+        if (!favoritesLoaded) return;
         localStorage.setItem("favorites", JSON.stringify(favorites));
-    }, [favorites]);
+    }, [favorites, favoritesLoaded]);
 
+    // Charger les stations selon le filtre
     useEffect(() => {
+        if (!favoritesLoaded) return;
         if (isUsingSuggestions) return;
+
+        if (stationFilter === "favorites") {
+            // Afficher uniquement les favoris
+            setStations(favorites);
+            setCurrentStationIndex(0);
+            return;
+        }
+
+        // Pour tous les autres filtres
         setupApi(stationFilter, searchTerm).then((data) => {
             setStations(data);
             setCurrentStationIndex(0);
         });
-    }, [stationFilter, searchTerm, isUsingSuggestions, favorites]);
+    }, [stationFilter, searchTerm, isUsingSuggestions, favorites, favoritesLoaded]);
 
     const setupApi = async (stationFilter, searchTerm = "") => {
-        if (stationFilter === "favorites") return favorites;
         const api = RadioBrowser;
         const params = { language: "english", limit: 40 };
 
         if (searchTerm !== "") params.name = searchTerm;
-        else if (stationFilter !== "all") params.tag = stationFilter;
+        else if (stationFilter !== "all" && stationFilter !== "favorites") params.tag = stationFilter;
 
         return await api.searchStations(params);
     };
@@ -135,7 +153,6 @@ const Radio = () => {
                                 <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
                                 <div className="name">{stations[currentStationIndex].name}</div>
 
-                                {/* ⭐ Bouton favoris */}
                                 <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
                                     {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
                                 </div>
