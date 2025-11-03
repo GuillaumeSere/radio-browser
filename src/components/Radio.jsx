@@ -120,6 +120,11 @@ const Radio = () => {
 
                     <Player autoplay loop src={animation} className="animation-right" style={{ height: '100px', width: '300px' }} />
                 </div>
+                <span className='description'>
+                    <p>Parcourez les radios par genre 🎵
+                        Recherchez et trouvez votre station rapidement 🔍
+                        Ajoutez vos radios favorites ⭐ et retrouvez-les facilement</p>
+                </span>
 
                 <div className="search-container">
                     <input
@@ -144,12 +149,6 @@ const Radio = () => {
                     )}
                 </div>
 
-                <span className='description'>
-                    <p>Parcourez les radios par genre 🎵 
-                    Recherchez et trouvez votre station rapidement 🔍
-                    Ajoutez vos radios favorites ⭐ et retrouvez-les facilement</p>
-                </span>
-                
                 <Slides />
 
                 <div className="stations">
