@@ -96,7 +96,10 @@ const Radio = () => {
                         <span
                             key={index}
                             className={stationFilter === filter ? "selected" : ""}
-                            onClick={() => setStationFilter(filter)}
+                            onClick={() => {
+                                setIsUsingSuggestions(false);
+                                setStationFilter(filter);
+                            }}
                         >
                             {filter}
                         </span>
