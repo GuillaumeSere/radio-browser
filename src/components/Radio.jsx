@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import defaultImage from "../radio.jpg";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
@@ -9,64 +10,51 @@ import Slides from './Slides';
 const RadioBrowser = require('radio-browser');
 
 const Radio = () => {
-    const [stations, setStations] = useState();
+    const [stations, setStations] = useState([]);
     const [stationFilter, setStationFilter] = useState("all");
     const [currentStationIndex, setCurrentStationIndex] = useState(0);
     const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const [isUsingSuggestions, setIsUsingSuggestions] = useState(false);
+    const [favorites, setFavorites] = useState([]);
 
+    // Charger les favoris depuis localStorage au montage
+    useEffect(() => {
+        const savedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
+        setFavorites(savedFavs);
+    }, []);
+
+    // Sauvegarder les favoris dans localStorage à chaque changement
+    useEffect(() => {
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+    }, [favorites]);
 
     useEffect(() => {
         if (isUsingSuggestions) return;
-
         setupApi(stationFilter, searchTerm).then((data) => {
             setStations(data);
             setCurrentStationIndex(0);
         });
-    }, [stationFilter, searchTerm, isUsingSuggestions]);
-
-    useEffect(() => {
-        let timer;
-        if (stations && stations[currentStationIndex]) {
-            timer = setTimeout(() => {
-                const audioPlayer = document.querySelector('.rhap_main-controls-button.rhap_play-pause-button');
-                if (audioPlayer) {
-                    audioPlayer.click();
-                    setTimeout(() => audioPlayer.click(), 100);
-                }
-            }, 5 * 60 * 1000);
-        }
-        return () => clearTimeout(timer);
-    }, [currentStationIndex, stations]);
+    }, [stationFilter, searchTerm, isUsingSuggestions, favorites]);
 
     const setupApi = async (stationFilter, searchTerm = "") => {
+        if (stationFilter === "favorites") return favorites;
         const api = RadioBrowser;
         const params = { language: "english", limit: 40 };
 
-        if (searchTerm !== "") {
-            params.name = searchTerm;
-        } else if (stationFilter !== "all") {
-            params.tag = stationFilter;
-        }
+        if (searchTerm !== "") params.name = searchTerm;
+        else if (stationFilter !== "all") params.tag = stationFilter;
 
         return await api.searchStations(params);
     };
 
-    // ✅ Recherche des suggestions (autocomplétion)
     const fetchSuggestions = async (value) => {
         const api = RadioBrowser;
         if (value.length < 2) return setSuggestions([]);
-
-        const result = await api.searchStations({
-            name: value,
-            limit: 10
-        });
-
+        const result = await api.searchStations({ name: value, limit: 10 });
         setSuggestions(result);
     };
 
-    // ✅ Au clic sur une suggestion → on joue directement la radio
     const handleSuggestionClick = (index) => {
         setIsUsingSuggestions(true);
         setStations(suggestions);
@@ -75,7 +63,7 @@ const Radio = () => {
         setSuggestions([]);
     };
 
-    const filters = ["all", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
+    const filters = ["favorites", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
 
     const setDefaultSrc = (event) => event.target.src = defaultImage;
 
@@ -85,10 +73,20 @@ const Radio = () => {
         else setCurrentStationIndex(index);
     };
 
+    const toggleFavorite = (station) => {
+        const exists = favorites.find(fav => fav.stationuuid === station.stationuuid);
+        if (exists) {
+            setFavorites(favorites.filter(fav => fav.stationuuid !== station.stationuuid));
+        } else {
+            setFavorites([...favorites, station]);
+        }
+    };
+
+    const isFavorite = stations && stations[currentStationIndex] && favorites.some(f => f.stationuuid === stations[currentStationIndex].stationuuid);
+
     return (
         <>
             <div className="radio">
-
                 <div className="filters">
                     <Player autoplay loop src={animation} className='animation-left' style={{ height: '100px', width: '300px' }} />
 
@@ -96,10 +94,7 @@ const Radio = () => {
                         <span
                             key={index}
                             className={stationFilter === filter ? "selected" : ""}
-                            onClick={() => {
-                                setIsUsingSuggestions(false);
-                                setStationFilter(filter);
-                            }}
+                            onClick={() => { setIsUsingSuggestions(false); setStationFilter(filter); }}
                         >
                             {filter}
                         </span>
@@ -123,12 +118,7 @@ const Radio = () => {
                         <ul className="autocomplete-list">
                             {suggestions.map((station, index) => (
                                 <li key={index} onClick={() => handleSuggestionClick(index)}>
-                                    <img
-                                        src={station.favicon || defaultImage}
-                                        onError={(e) => (e.target.src = defaultImage)}
-                                        alt={station.name}
-                                        className="suggestion-icon"
-                                    />
+                                    <img src={station.favicon || defaultImage} onError={(e) => (e.target.src = defaultImage)} alt={station.name} className="suggestion-icon" />
                                     <span>{station.name}</span>
                                 </li>
                             ))}
@@ -144,6 +134,11 @@ const Radio = () => {
                             <div className="stationName">
                                 <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
                                 <div className="name">{stations[currentStationIndex].name}</div>
+
+                                {/* ⭐ Bouton favoris */}
+                                <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
+                                    {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
+                                </div>
                             </div>
 
                             <AudioPlayer
@@ -173,5 +168,4 @@ const Radio = () => {
 };
 
 export default Radio;
-
 
