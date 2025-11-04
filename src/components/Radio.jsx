@@ -23,7 +23,7 @@ const Radio = () => {
     useEffect(() => {
         const savedFavs = JSON.parse(localStorage.getItem("favoris")) || [];
         setFavorites(savedFavs);
-        setFavoritesLoaded(true);
+        setFavoritesLoaded(true)
 
         if (stationFilter === "favoris") {
             setStations(savedFavs);
