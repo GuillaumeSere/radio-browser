@@ -42,7 +42,7 @@ body[data-theme=light] {
 }
 
 body[data-theme=dark] {
-    background: url(./bg3.png) no-repeat;
+    background: url(./bg4.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -107,6 +107,9 @@ h2 {
     flex-direction: column;
     margin-top: 5rem;
     margin: 0 auto;
+}
+.rhap_container{
+    box-shadow: none !important;
 }
 
 .search-container {
@@ -406,6 +409,7 @@ audio {
     cursor: pointer;
     margin-top: -5rem;
     transition: all 0.3s ease-in-out;
+    color: rgba(95, 95, 95, 0.993);
 }
 
 .rhap_controls-section .rhap_volume-controls {
@@ -415,11 +419,11 @@ audio {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
-    fill: #ebebeb !important;
+    fill: #4a4a4a!important;
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-    fill: rgb(255, 255, 255) !important;
+    fill: #4a4a4a !important;
     border: 1px solid black;
 }
 
