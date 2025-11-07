@@ -53,30 +53,40 @@ body[data-theme=dark] {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: transparent;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+    background: linear-gradient(90deg, orange 0%, yellow 25%, green 50%, blue 75%, purple 100%);
+      background-size: 200% 100%;
     background-clip: text;
-    /* background-clip tells your CSS exactly where you want to apply */
     -webkit-background-clip: text;
-    transition: 1s ease-in-out;
-    animation: move 20s linear infinite;
+    position: relative;
+    animation: move 10s linear infinite, glow 4s ease-in-out infinite;
+    will-change: transform, text-shadow, background-position;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    mix-blend-mode: overlay;
 }
 
 @keyframes move {
-    0% {
-        background-position: -1000px 0;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-    50%,
-    100% {
-        background-position: 1000px 0;
-    }
-
-    100% {
-        background-position: -1000px 0;
-    }
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 6px rgba(255,255,255,0.06); transform: translateY(0); }
+    50% { text-shadow: 0 0 14px rgba(255,255,255,0.12); transform: translateY(-4px); }
 }
 
 .dark {
