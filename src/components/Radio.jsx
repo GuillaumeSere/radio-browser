@@ -102,17 +102,32 @@ const Radio = () => {
 
     const isFavorite = stations && stations[currentStationIndex] && favorites.some(f => f.stationuuid === stations[currentStationIndex].stationuuid);
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <>
             <div className="radio">
-                <div className="filters">
+                <div className={`burger-menu ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'} role="button" tabIndex={0}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={`filters ${isMenuOpen ? 'active' : ''}`}>
                     <Player autoplay loop src={animation} className='animation-left' style={{ height: '100px', width: '300px' }} />
 
                     {filters.map((filter, index) => (
                         <span
                             key={index}
                             className={stationFilter === filter ? "selected" : ""}
-                            onClick={() => { setIsUsingSuggestions(false); setStationFilter(filter); }}
+                            onClick={() => { 
+                                setIsUsingSuggestions(false); 
+                                setStationFilter(filter);
+                                setIsMenuOpen(false);
+                            }}
                         >
                             {filter}
                         </span>
