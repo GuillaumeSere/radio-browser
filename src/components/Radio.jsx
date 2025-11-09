@@ -103,9 +103,14 @@ const Radio = () => {
     const isFavorite = stations && stations[currentStationIndex] && favorites.some(f => f.stationuuid === stations[currentStationIndex].stationuuid);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showFavorites, setShowFavorites] = useState(true);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleFavorites = () => {
+        setShowFavorites(!showFavorites);
     };
 
     return (
@@ -164,37 +169,82 @@ const Radio = () => {
                     )}
                 </div>
 
-                <Slides />
+                      <div className="player-favorites-container">
+                    <div className="stations">
+                        {stations && stations.length > 0 && (
+                            <div className="station" key={currentStationIndex}>
+                                <div className="stationName">
+                                    <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
+                                    <div className="name">{stations[currentStationIndex].name}</div>
 
-                <div className="stations">
-                    {stations && stations.length > 0 && (
-                        <div className="station" key={currentStationIndex}>
-                            <div className="stationName">
-                                <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
-                                <div className="name">{stations[currentStationIndex].name}</div>
+                                    <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
+                                        {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
+                                    </div>
+                                </div>
 
-                                <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
-                                    {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
+                                <AudioPlayer
+                                    className="player"
+                                    src={stations[currentStationIndex].url_resolved}
+                                    showJumpControls={false}
+                                    layout="stacked"
+                                    customProgressBarSection={[]}
+                                    customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
+                                    autoPlayAfterSrcChange={false}
+                                />
+
+                                <div className="station-controls">
+                                    <CiCircleChevLeft className='btn' onClick={() => handleStationChange(currentStationIndex - 1)} />
+                                    <CiCircleChevRight className='btn' onClick={() => handleStationChange(currentStationIndex + 1)} />
                                 </div>
                             </div>
-
-                            <AudioPlayer
-                                className="player"
-                                src={stations[currentStationIndex].url_resolved}
-                                showJumpControls={false}
-                                layout="stacked"
-                                customProgressBarSection={[]}
-                                customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
-                                autoPlayAfterSrcChange={false}
-                            />
-
-                            <div className="station-controls">
-                                <CiCircleChevLeft className='btn' onClick={() => handleStationChange(currentStationIndex - 1)} />
-                                <CiCircleChevRight className='btn' onClick={() => handleStationChange(currentStationIndex + 1)} />
-                            </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
+             
                 </div>
+
+                   <div className={`favorites-sidebar ${showFavorites ? 'visible' : ''}`}>
+                        <div className="favorites-header">
+                            <h3>Mes Favoris ⭐</h3>
+                            <button className="close-favorites" onClick={() => setShowFavorites(false)} aria-label="Fermer les favoris">
+                                ×
+                            </button>
+                        </div>
+                        <div className="favorites-list">
+                            {favorites.map((station, index) => (
+                                <div 
+                                    key={station.stationuuid} 
+                                    className="favorite-item"
+                                    onClick={() => {
+                                        setStations([...favorites]);
+                                        setCurrentStationIndex(index);
+                                        setStationFilter("favoris ⭐");
+                                        setShowFavorites(false);
+                                    }}
+                                >
+                                    <img 
+                                        src={station.favicon || defaultImage} 
+                                        alt={station.name} 
+                                        onError={setDefaultSrc}
+                                        className="favorite-logo"
+                                    />
+                                    <span className="favorite-name">{station.name}</span>
+                                </div>
+                            ))}
+                            {favorites.length === 0 && (
+                                <div className="no-favorites">
+                                    Aucune radio favorite
+                                </div>
+                            )}
+                        </div>
+                    </div>
+
+                    {!showFavorites && (
+                        <button className="show-favorites-button" onClick={() => setShowFavorites(true)} aria-label="Afficher les favoris">
+                            ⭐
+                        </button>
+                    )}
+
+                <Slides />
             </div>
 
             <div className="footer">

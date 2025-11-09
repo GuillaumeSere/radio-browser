@@ -136,6 +136,7 @@ h2 {
     flex-direction: column;
     margin-top: 5rem;
     margin: 0 auto;
+    height: 100vh;
 }
 
 .rhap_container {
@@ -150,7 +151,7 @@ h2 {
 
 .search-container input {
     padding: 10px;
-    width: 260px;
+    width: 200px;
     border-radius: 8px;
     border: 1px solid #ccc;
     outline: none;
@@ -168,7 +169,7 @@ h2 {
     border-radius: 6px;
     max-height: 250px;
     overflow-y: auto;
-    z-index: 99;
+    z-index: 101;
     padding: 0;
     list-style: none;
 }
@@ -363,17 +364,186 @@ h2 {
     border: 2px solid white !important;
 }
 
-.stations {
-    height: 50vh;
-    flex-grow: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.player-favorites-container {
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stations {
+    flex: 1;
+    padding: 1rem;
+    overflow: hidden;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.favorites-sidebar {
+    /* fixed right-side panel on desktop and tablet */
+    position: fixed;
+    right: 0;
+    top: 60px;
+    z-index: 1001;
+    width: 300px;
+    background: #000000e6;
+    border-radius: 8px 0 0 8px;
+    height: calc(100vh - 80px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: -8px 0 24px rgba(0,0,0,0.6);
+}
+
+/* Hidden: slide entirely to the right */
+.favorites-sidebar:not(.visible) {
+    transform: translateX(110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* When visible, push the main content so it doesn't sit under the fixed panel */
+.favorites-sidebar.visible ~ .player-favorites-container {
+    margin-right: 320px; /* allow for panel width + gap */
+    transition: margin-right 0.3s ease;
+}
+
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.favorites-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.close-favorites {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.close-favorites:hover {
+    opacity: 1;
+}
+
+.favorites-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.favorite-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.favorite-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.favorite-name {
+    flex: 1;
+    font-size: 0.9rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-favorites {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+}
+
+.show-favorites-button {
+    position: fixed;
+    right: 12px;
+    top: 150px;
+    transform: none;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s, opacity 0.3s;
+    z-index: 1002;
+}
+
+.show-favorites-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 1180px) {
+    .player-favorites-container {
+        flex-direction: column;
+    }
+
+    /* On small screens show the favorites as a right-side sliding panel */
+    .favorites-sidebar {
+        width: 300px;
+        position: fixed;
+        right: 0;
+        top: 60px;
+        height: calc(100vh - 80px);
+        margin: 0;
+        border-radius: 8px 0 0 8px;
+        box-shadow: -8px 0 24px rgba(0,0,0,0.6);
+        transform: translateX(0);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 1001;
+    }
+
+    /* When hidden, slide it fully to the right */
+    .favorites-sidebar:not(.visible) {
+        transform: translateX(110%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Place the small open button near the right edge */
+    .show-favorites-button {
+        position: fixed;
+        left: 1rem;
+        width: 32px;
+        height: 32px;
+        top: 190px;
+        transform: none;
+        z-index: 998;
+        border-radius: 6px;
+    }
+
+    /* make sure the hidden panel doesn't disturb layout */
+    .favorites-sidebar.visible {
+        opacity: 1;
+    }
 }
 
 .station {
@@ -456,7 +626,7 @@ audio {
 }
 
 .rhap_stacked .rhap_controls-section {
-    margin-top: 0 !important;
+    margin-top: -16px !important;
 }
 
 .rhap_play-pause-button {
@@ -550,6 +720,7 @@ audio {
     width: 100%;
     max-width: 100%;
     height: 350px;
+    margin-top: -3rem;
     overflow: hidden;
 }
 
@@ -633,8 +804,8 @@ audio {
     }
 
     .station {
-        width: 270px;
-        height: 120px;
+        width: 240px;
+        height: 100px;
     }
 
     .stationName img {
