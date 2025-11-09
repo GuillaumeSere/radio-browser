@@ -283,7 +283,7 @@ h2 {
     }
 
     .description {
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 }
 
@@ -534,7 +534,7 @@ h2 {
         left: 1rem;
         width: 32px;
         height: 32px;
-        top: 190px;
+        top: 135px;
         transform: none;
         z-index: 998;
         border-radius: 6px;
@@ -547,7 +547,7 @@ h2 {
 }
 
 .station {
-    height: 200px;
+    height: 160px;
     width: 400px;
     font-size: 1.4rem;
     margin: 1.25rem;
