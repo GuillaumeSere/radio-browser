@@ -29,7 +29,7 @@ const Radio = () => {
             setStations(savedFavs);
             setCurrentStationIndex(0);
         }
-    }, []);
+    }, [stationFilter]);
 
     // Sauvegarder les favoris dans localStorage
     useEffect(() => {
@@ -107,10 +107,6 @@ const Radio = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-    const toggleFavorites = () => {
-        setShowFavorites(!showFavorites);
     };
 
     return (
