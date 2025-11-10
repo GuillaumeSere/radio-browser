@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import defaultImage from "../radio.jpg";
+import shoping from "../images/shoping.png";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -165,6 +166,12 @@ const Radio = () => {
                     )}
                 </div>
 
+                    <div className="shoping">
+                        <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
+                            <img src={shoping} alt="Boutique en ligne" />                        
+                        </a>
+                    </div>
+                    
                       <div className="player-favorites-container">
                     <div className="stations">
                         {stations && stations.length > 0 && (
