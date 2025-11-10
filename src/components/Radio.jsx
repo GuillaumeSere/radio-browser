@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import defaultImage from "../radio.jpg";
-import shoping from "../images/shoping.png";
+import hoodies1 from "../images/hoodies1.png";
+import hoodies2 from "../images/hoodies2.png";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -125,8 +126,8 @@ const Radio = () => {
                         <span
                             key={index}
                             className={stationFilter === filter ? "selected" : ""}
-                            onClick={() => { 
-                                setIsUsingSuggestions(false); 
+                            onClick={() => {
+                                setIsUsingSuggestions(false);
                                 setStationFilter(filter);
                                 setIsMenuOpen(false);
                             }}
@@ -166,46 +167,53 @@ const Radio = () => {
                     )}
                 </div>
 
-                    <div className="shoping">
+                <div className="container">
+                    <div className="shoping-1">
                         <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
-                            <img src={shoping} alt="Boutique en ligne" />                        
+                            <img src={hoodies1} alt="Boutique en ligne" />
                         </a>
                     </div>
-                    
-                      <div className="player-favorites-container">
-                    <div className="stations">
-                        {stations && stations.length > 0 && (
-                            <div className="station" key={currentStationIndex}>
-                                <div className="stationName">
-                                    <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
-                                    <div className="name">{stations[currentStationIndex].name}</div>
 
-                                    <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
-                                        {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
+                    <div className="player-favorites-container">
+                        <div className="stations">
+                            {stations && stations.length > 0 && (
+                                <div className="station" key={currentStationIndex}>
+                                    <div className="stationName">
+                                        <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
+                                        <div className="name">{stations[currentStationIndex].name}</div>
+
+                                        <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
+                                            {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
+                                        </div>
+                                    </div>
+
+                                    <AudioPlayer
+                                        className="player"
+                                        src={stations[currentStationIndex].url_resolved}
+                                        showJumpControls={false}
+                                        layout="stacked"
+                                        customProgressBarSection={[]}
+                                        customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
+                                        autoPlayAfterSrcChange={false}
+                                    />
+
+                                    <div className="station-controls">
+                                        <CiCircleChevLeft className='btn' onClick={() => handleStationChange(currentStationIndex - 1)} />
+                                        <CiCircleChevRight className='btn' onClick={() => handleStationChange(currentStationIndex + 1)} />
                                     </div>
                                 </div>
+                            )}
+                        </div>
 
-                                <AudioPlayer
-                                    className="player"
-                                    src={stations[currentStationIndex].url_resolved}
-                                    showJumpControls={false}
-                                    layout="stacked"
-                                    customProgressBarSection={[]}
-                                    customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
-                                    autoPlayAfterSrcChange={false}
-                                />
+                        <div className="shoping-2">
+                            <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
+                                <img src={hoodies2} alt="Boutique en ligne" />
+                            </a>
+                        </div>
 
-                                <div className="station-controls">
-                                    <CiCircleChevLeft className='btn' onClick={() => handleStationChange(currentStationIndex - 1)} />
-                                    <CiCircleChevRight className='btn' onClick={() => handleStationChange(currentStationIndex + 1)} />
-                                </div>
-                            </div>
-                        )}
                     </div>
-             
-                </div>
 
-                   <div className={`favorites-sidebar ${showFavorites ? 'visible' : ''}`}>
+                    <div className={`favorites-sidebar ${showFavorites ? 'visible' : ''}`}>
                         <div className="favorites-header">
                             <h3>Mes Favoris ⭐</h3>
                             <button className="close-favorites" onClick={() => setShowFavorites(false)} aria-label="Fermer les favoris">
@@ -214,8 +222,8 @@ const Radio = () => {
                         </div>
                         <div className="favorites-list">
                             {favorites.map((station, index) => (
-                                <div 
-                                    key={station.stationuuid} 
+                                <div
+                                    key={station.stationuuid}
                                     className="favorite-item"
                                     onClick={() => {
                                         setStations([...favorites]);
@@ -224,9 +232,9 @@ const Radio = () => {
                                         setShowFavorites(false);
                                     }}
                                 >
-                                    <img 
-                                        src={station.favicon || defaultImage} 
-                                        alt={station.name} 
+                                    <img
+                                        src={station.favicon || defaultImage}
+                                        alt={station.name}
                                         onError={setDefaultSrc}
                                         className="favorite-logo"
                                     />
@@ -247,8 +255,10 @@ const Radio = () => {
                         </button>
                     )}
 
-                <Slides />
+                    <Slides />
+                </div>
             </div>
+
 
             <div className="footer">
                 <p> &copy; 2022, Developed by <span>Guillaume SERE </span>with React</p>
