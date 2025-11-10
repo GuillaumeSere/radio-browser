@@ -841,8 +841,6 @@ audio {
 }
 
 
-
-
 @media (max-width: 1700px) {
     .animation-left {
         height: 80px !important;
@@ -887,7 +885,6 @@ audio {
         right: 4rem;
     }
 
-
     .current-category {
         right: 45%;
     }
@@ -920,6 +917,7 @@ audio {
 
     .name {
         font-size: 12px;
+        margin-top: 1.5rem;
     }
 
     .a-dwaP {
