@@ -160,6 +160,7 @@ h2 {
 
 .shoping{
     margin: 0 auto;
+    z-index: 1000;
     max-width: 300px;
     height: 200px;
     border-radius: 5px;
