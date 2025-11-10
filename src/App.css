@@ -158,7 +158,7 @@ h2 {
     font-size: 16px;
 }
 
-.container{
+.container {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -167,22 +167,31 @@ h2 {
     max-width: 1200px;
 }
 
-.shoping-1{
+.shoping-1 {
     margin: 0 auto;
+    position: relative;
     z-index: 998;
     max-width: 300px;
     height: 200px;
     border-radius: 5px;
 }
 
-.shoping-1 img{
+.shoping-title {
+    position: absolute;
+    color: black;
+    bottom: 10px;
+    left: 30px;
+}
+
+.shoping-1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.shoping-2{
+.shoping-2 {
+    position: relative;
     margin: 0 auto;
     z-index: 1000;
     max-width: 300px;
@@ -190,7 +199,7 @@ h2 {
     border-radius: 5px;
 }
 
-.shoping-2 img{
+.shoping-2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -430,7 +439,7 @@ h2 {
     border-radius: 8px 0 0 8px;
     height: calc(100vh - 80px);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    box-shadow: -8px 0 24px rgba(0,0,0,0.6);
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.6);
 }
 
 /* Hidden: slide entirely to the right */
@@ -441,8 +450,9 @@ h2 {
 }
 
 /* When visible, push the main content so it doesn't sit under the fixed panel */
-.favorites-sidebar.visible ~ .player-favorites-container {
-    margin-right: 320px; /* allow for panel width + gap */
+.favorites-sidebar.visible~.player-favorites-container {
+    margin-right: 320px;
+    /* allow for panel width + gap */
     transition: margin-right 0.3s ease;
 }
 
@@ -554,7 +564,7 @@ h2 {
         height: calc(100vh - 80px);
         margin: 0;
         border-radius: 8px 0 0 8px;
-        box-shadow: -8px 0 24px rgba(0,0,0,0.6);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.6);
         transform: translateX(0);
         transition: transform 0.3s ease, opacity 0.3s ease;
         z-index: 1001;
@@ -759,7 +769,7 @@ audio {
     width: 100%;
     max-width: 100%;
     height: 350px;
-    margin-top: -3rem;
+    margin-top: -2rem;
     overflow: hidden;
 }
 
@@ -834,11 +844,20 @@ audio {
 }
 
 @media (max-width: 1180px) {
-    .container{
+    .container {
         flex-direction: column;
     }
-    .shoping-2{
+
+    .shoping-2 {
         display: none;
+    }
+
+    .shoping-1 {
+        max-width: 250px;
+        height: 150px;
+    }
+    .shoping-title{
+        font-size: 12px;
     }
 }
 

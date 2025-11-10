@@ -169,6 +169,7 @@ const Radio = () => {
 
                 <div className="container">
                     <div className="shoping-1">
+                        <span className='shoping-title'>Boutique en ligne</span>
                         <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
                             <img src={hoodies1} alt="Boutique en ligne" />
                         </a>
@@ -206,6 +207,7 @@ const Radio = () => {
                         </div>
 
                         <div className="shoping-2">
+                             <span className='shoping-title'>Boutique en ligne</span>
                             <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
                                 <img src={hoodies2} alt="Boutique en ligne" />
                             </a>
