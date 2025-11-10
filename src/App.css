@@ -527,6 +527,12 @@ h2 {
     text-overflow: ellipsis;
 }
 
+.favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 17rem;
+}
+
 .no-favorites {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
@@ -663,8 +669,8 @@ h2 {
     background: rgba(255, 255, 255, 0.1);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
-    margin:0 auto;
-    margin-bottom: -1.5rem;
+    margin: 0 auto;
+    margin-bottom: -1.4rem;
     width: fit-content;
     text-transform: capitalize;
 }
@@ -691,7 +697,7 @@ audio {
 }
 
 .rhap_stacked .rhap_controls-section {
-    margin-top: -16px !important;
+    margin-top: -21px !important;
 }
 
 .rhap_play-pause-button {
@@ -872,9 +878,20 @@ audio {
         max-width: 250px;
         height: 150px;
     }
-    .shoping-title{
+
+    .shoping-title {
         font-size: 12px;
     }
+
+    .favorite-btn {
+        right: 4rem;
+    }
+
+
+    .current-category {
+        right: 45%;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -889,6 +906,11 @@ audio {
     .station {
         width: 240px;
         height: 100px;
+    }
+
+    .current-category {
+        right: 40%;
+        font-size: 10px;
     }
 
     .stationName img {
