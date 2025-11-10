@@ -656,6 +656,19 @@ h2 {
     border-radius: 50%;
 }
 
+.current-category {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    margin:0 auto;
+    margin-bottom: -1.5rem;
+    width: fit-content;
+    text-transform: capitalize;
+}
+
 audio {
     width: 100%;
 }

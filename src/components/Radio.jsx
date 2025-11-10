@@ -179,13 +179,16 @@ const Radio = () => {
                         <div className="stations">
                             {stations && stations.length > 0 && (
                                 <div className="station" key={currentStationIndex}>
+                                    <div className="current-category">
+                                        {stationFilter === "all" ? "Toutes les radios" : stationFilter}
+                                    </div>
                                     <div className="stationName">
                                         <img className="logo" src={stations[currentStationIndex].favicon} alt="station logo" onError={setDefaultSrc} />
-                                        <div className="name">{stations[currentStationIndex].name}</div>
 
                                         <div className="favorite-btn" onClick={() => toggleFavorite(stations[currentStationIndex])}>
                                             {isFavorite ? <AiFillStar color="gold" /> : <AiOutlineStar />}
                                         </div>
+                                        <div className="name">{stations[currentStationIndex].name}</div>
                                     </div>
 
                                     <AudioPlayer
@@ -207,7 +210,7 @@ const Radio = () => {
                         </div>
 
                         <div className="shoping-2">
-                             <span className='shoping-title'>Boutique en ligne</span>
+                            <span className='shoping-title'>Boutique en ligne</span>
                             <a href="https://www.zazzle.fr/store/arts__abstrait" target="_blank" rel="noopener noreferrer">
                                 <img src={hoodies2} alt="Boutique en ligne" />
                             </a>
