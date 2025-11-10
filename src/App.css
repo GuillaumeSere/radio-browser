@@ -910,6 +910,10 @@ audio {
         font-size: 10px;
     }
 
+    .rhap_play-pause-button {
+    font-size: 35px !important;
+}
+
     .stationName img {
         width: 50px;
         height: 50px;
@@ -936,4 +940,5 @@ audio {
         height: 200px;
         /* Hauteur fixe */
     }
+
 }
